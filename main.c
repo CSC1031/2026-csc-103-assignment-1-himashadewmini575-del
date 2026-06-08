@@ -11,11 +11,23 @@ int main()
 
     printf("Enter Mathematics marks(out of 100): ");
     scanf("%d",&MAT);
+    while(MAT>100){
+       printf("\ninvalid input\n");
+       printf("Enter Mathematics marks(out of 100): ");
+       scanf("%d",&MAT);
+       }
+
     printf("Enter science marks(out of 100): ");
     scanf("%d",&SCI);
+    while(SCI>100){
+        printf("\ninvalid input\n");
+    }
     printf("Enter English marks(out of 100): ");
     scanf("%d",&ENG);
-// add feature to disable inputs>100
+    while(ENG>100){
+        printf("\ninvalid input\n");
+    }
+
     total=MAT+SCI+ENG;
     average=(double)total/3.0;
 
@@ -31,7 +43,7 @@ int main()
      else if(50<=average<=59){
      printf ("\nyour grade is D");}
     else{
-    printf("Your grade is F");}
+    printf("\nYour grade is F\n");}
 
 
     if(MAT&SCI&ENG>=40){
